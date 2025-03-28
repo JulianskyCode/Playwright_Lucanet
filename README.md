@@ -16,7 +16,6 @@ project_assignment_lucanet/
 │   ├── playwright.config.ts   # Playwright configuration file
 │   ├── devices.ts             # Device/viewport settings
 │   └── ...
-├── .env                       # Environment variables
 ├── package.json               # Project dependencies and scripts
 └── README.md                  # Documentation
 ```
