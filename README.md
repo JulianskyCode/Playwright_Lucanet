@@ -16,10 +16,6 @@ project_assignment_lucanet/
 │   ├── playwright.config.ts   # Playwright configuration file
 │   ├── devices.ts             # Device/viewport settings
 │   └── ...
-├── utils/                     # Utility Layer: Shared helper functions and utilities
-│   ├── assertions.ts          # Common assertion patterns
-│   ├── errorHandler.ts        # Error handling utilities
-│   └── ...
 ├── .env                       # Environment variables
 ├── package.json               # Project dependencies and scripts
 └── README.md                  # Documentation
