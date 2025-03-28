@@ -87,8 +87,32 @@ Before you begin, ensure the following are installed on your system:
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
-   cd [repository-name]
+   git clone https://github.com/JulianskyCode/Playwright_Lucanet.git
+   cd Playwright_Lucanet
 
+2. Install dependencies:
+   npm install
 
+3. Install Playwright browsers:
+   npx playwright install
 
+4. Run tests:
+   npx playwright test
+
+## Configured Browsers and Workers
+
+### Browsers
+   The framework is configured to run tests on the following browsers by default:
+
+   Chromium: For testing on Google Chrome and Microsoft Edge.
+   Firefox: For testing on Mozilla Firefox.
+   WebKit: For testing on Safari.
+   These configurations are defined in the playwright.config.ts file. You can customize the browser settings as needed.
+
+### Workers
+   The framework is set up to run tests in parallel using multiple workers to optimize execution time. By default:
+
+   The number of workers is automatically determined based on the available CPU cores.
+   You can override the number of workers using the --workers flag:
+
+   npx playwright test --workers=4
