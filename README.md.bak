@@ -1,0 +1,229 @@
+# Lucanet Homepage Test Automation Framework
+
+## Overview
+
+A comprehensive test automation framework for the Lucanet website, built with Playwright and TypeScript. This framework emphasizes maintainability, reliability, and scalability in UI testing.
+
+## Design Philosophy
+
+Our framework is built on several key principles:
+
+### Modular Architecture
+- **Separation of Concerns**: Clear distinction between test logic, page objects, and configuration
+- **Component Reusability**: Shared utilities and helpers to minimize code duplication
+- **Scalable Structure**: Easy integration of new tests and page objects without architectural changes
+
+### Reliability First
+- **Robust Error Handling**: Graceful handling of timeouts, network issues, and UI state changes
+- **Consistent State Management**: Clear setup and teardown procedures for predictable test execution
+- **Smart Waiting Strategies**: Intelligent timeout management to handle dynamic content reliably
+
+### Developer Experience
+- **Clear Debugging Paths**: Built-in logging and snapshot capabilities for easy troubleshooting
+- **Intuitive API**: Page Object Model implementation that mirrors natural user interactions
+- **Comprehensive Reporting**: Detailed test results and failure analysis
+
+## Framework Architecture
+
+### Component Organization
+
+The framework is organized into distinct layers:
+
+1. **Test Layer**
+   - Contains test suites and scenarios
+   - Focuses on business logic and acceptance criteria
+   - Utilizes page objects for UI interactions
+
+2. **Page Object Layer**
+   - Encapsulates page-specific selectors and actions
+   - Handles element visibility and state management
+   - Provides high-level navigation methods
+
+3. **Configuration Layer**
+   - Manages environment-specific settings
+   - Controls timeout and viewport configurations
+   - Defines test execution parameters
+
+4. **Utility Layer**
+   - Shared helper functions
+   - Common assertion patterns
+   - Error handling utilities
+
+### Page Object Model Implementation
+
+Our POM implementation focuses on:
+
+1. **Element Management**
+   - Centralized selector definitions
+   - Standardized visibility checking
+   - Automatic retry mechanisms for flaky elements
+
+2. **Navigation Patterns**
+   - Fluid page transitions
+   - Wait state handling
+   - URL and state verification
+
+3. **Error Recovery**
+   - Graceful handling of missing elements
+   - Automatic recovery from common issues
+   - Detailed error reporting
+
+## Configuration Best Practices
+
+### Timeout Management
+
+We implement a three-tier timeout strategy:
+
+1. **Global Timeouts**
+   - Default values for standard operations
+   - Baseline for all wait operations
+   - Conservative settings for stability
+
+2. **Operation-Specific Timeouts**
+   - Custom timeouts for complex operations
+   - Navigation-specific wait times
+   - Animation and transition handling
+
+3. **Dynamic Timeouts**
+   - Context-aware wait times
+   - Performance-based adjustments
+   - Environment-specific configurations
+
+### Viewport Management
+
+Our responsive testing strategy includes:
+
+1. **Breakpoint Definitions**
+   - Standard device sizes
+   - Custom breakpoint handling
+   - Orientation support
+
+2. **Responsive Behaviors**
+   - Automatic viewport detection
+   - Conditional element selection
+   - Device-specific interaction patterns
+
+## Testing Best Practices
+
+### Test Organization
+
+1. **Logical Grouping**
+   - Feature-based test suites
+   - Scenario-driven organization
+   - Clear naming conventions
+
+2. **State Management**
+   - Independent test cases
+   - Clean state between tests
+   - Predictable test data
+
+3. **Assertion Strategies**
+   - Meaningful verifications
+   - Robust state checking
+   - Clear failure messages
+
+## Common Usage Scenarios
+
+### Basic Test Development
+
+1. **Creating New Tests**
+   - Start with test planning
+   - Implement page objects first
+   - Build test scenarios
+
+2. **Handling Dynamic Content**
+   - Smart waiting strategies
+   - State verification
+   - Retry mechanisms
+
+### Responsive Testing
+
+1. **Device Simulation**
+   - Viewport configuration
+   - Device-specific behavior
+   - Cross-browser verification
+
+2. **Common Patterns**
+   - Mobile-first approach
+   - Conditional element handling
+   - Responsive layout verification
+
+## Maintenance and Troubleshooting
+
+### Common Issues
+
+1. **Element Location**
+   - Dynamic content handling
+   - Timing-related failures
+   - Selector maintenance
+
+2. **State Management**
+   - Test isolation
+   - Data cleanup
+   - Browser state
+
+### Debug Techniques
+
+1. **Visual Debugging**
+   - Screenshot capture
+   - Video recording
+   - Step-by-step replay
+
+2. **Performance Optimization**
+   - Parallel execution
+   - Resource management
+   - Cache utilization
+
+### Reliability Enhancement
+
+1. **Flaky Test Management**
+   - Identification strategies
+   - Stabilization techniques
+   - Monitoring and reporting
+
+2. **Scale Considerations**
+   - Test suite organization
+   - Resource optimization
+   - Execution strategies
+
+## Setup and Execution
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm (v7 or higher)
+- Chrome browser (latest version)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   cd [repository-name]
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running Tests
+- Run all tests:
+  ```bash
+  npm test
+  ```
+
+- Run specific test suite:
+  ```bash
+  npm test -- --grep "suite name"
+  ```
+
+- Run tests in headed mode:
+  ```bash
+  npm run test:headed
+  ```
+
+### Configuration
+- Environment variables can be set in `.env` file
+- Test configuration can be modified in `playwright.config.ts`
+- Device/viewport settings are in `config/devices.ts`
+
+## Additional Resources
